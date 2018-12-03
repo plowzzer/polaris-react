@@ -595,6 +595,8 @@ describe('<TextField />', () => {
           id="MyField"
           onChange={noop}
           helpText="Help text"
+          showCharacterCount
+          maxLength={5}
         />,
       );
 
@@ -602,6 +604,9 @@ describe('<TextField />', () => {
       expect(textField.find(Labelled).prop('label')).toBe('TextField');
       expect(textField.find(Labelled).prop('id')).toBe('MyField');
       expect(textField.find(Labelled).prop('helpText')).toBe('Help text');
+      expect(textField.find(Labelled).prop('showCharacterCount')).toBe(true);
+      expect(textField.find(Labelled).prop('characterCount')).toBe(0);
+      expect(textField.find(Labelled).prop('maxLength')).toBe(5);
     });
 
     it('passes error to Labelled', () => {
