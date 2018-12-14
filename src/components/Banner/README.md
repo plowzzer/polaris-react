@@ -521,6 +521,23 @@ Banners inside of cards render with less spacing and a pared-back design to fit 
 </Card>
 ```
 
+### Banner with primary and secondary actions
+
+<!-- example-for: web -->
+
+Use a banner with a secondary action to allow merchants to learn more about a change or persistent condition.
+
+```jsx
+<Banner
+  title="Your shop is not eligible to sell on Marketplace"
+  action={{content: 'Add products'}}
+  status="warning"
+  secondaryAction={{content: 'Learn more about marketplace requirements'}}
+>
+  <p>You can still sell products on your Facebook Shop.</p>
+</Banner>
+```
+
 ---
 
 ## Related components
